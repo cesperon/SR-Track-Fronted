@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { GiPoliceCar } from "react-icons/gi";
 
-const Header = ({ openLogin, openSignup, openInfo }) => {
+const DashboardHeader = ({ openLogin, openSignup, openInfo }) => {
   const menuIndex = Array(4).fill(false);
   menuIndex[0] = true;
   const [menu, setMenu] = useState(menuIndex);
@@ -13,7 +13,7 @@ const Header = ({ openLogin, openSignup, openInfo }) => {
     console.log(menu);
   };
   return (
-    <div className="flex justify-center items-center gap-12 text-black text-3xl tracking-wider bg-white shadow-xl relative border-blue-500 border-b-2">
+    <div className="flex justify-center items-center gap-12 text-black text-3xl tracking-wider bg-gray-400  relative ">
       <span className="ml-4 rounded-full bg-blue-400 p-2 absolute left-0">
         <GiPoliceCar size="30" />
       </span>
@@ -74,4 +74,4 @@ const Header = ({ openLogin, openSignup, openInfo }) => {
   );
 };
 
-export default Header;
+export default DashboardHeader;
